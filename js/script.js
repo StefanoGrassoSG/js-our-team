@@ -28,7 +28,8 @@ const members = [
         lastName: 'Estrada',
         role: 'Developer',
         photo: 'scott-estrada-developer.jpg'
-    },{
+    },
+    {
         firstName: 'Barbara',
         lastName: 'Ramos',
         role: 'Graphic Designer',
@@ -38,9 +39,14 @@ const members = [
 
 
 for (let index = 0; index < members.length; index++) {
+    const newCard = document.createElement('div');
+
     const singleobject = members[index];
+    console.log(singleobject)
     for(const key in singleobject) {
         console.log(key, singleobject[key]);
-        document.querySelector('.container').append(key, singleobject[key])
+        newCard.append(singleobject[key]);
+        document.querySelector('.container').append(newCard)
+        newCard.classList.add('card')
     }
 }
