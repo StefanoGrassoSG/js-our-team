@@ -40,20 +40,42 @@ const members = [
 
 for (let index = 0; index < members.length; index++) {
     const newCard = document.createElement('div');
+    const first = document.createElement('span');
+    const last = document.createElement('span');
+    const role = document.createElement('small')
     const singleobject = members[index];
-    console.log(singleobject)
+   
     
 
     newCard.innerHTML = (singleobject.photo)
-   // newCard.append(singleobject.firstName);
-    //newCard.append(singleobject.lastName);
+    first.append(singleobject.firstName)
+    last.append(singleobject.lastName)
+    role.append(singleobject.role)
+    
+    
+
     document.querySelector('.container').append(newCard)
     newCard.classList.add('card')
-    const images = document.querySelectorAll('img')
 
+    const images = document.querySelectorAll('img')
     for (let index = 0; index < images.length; index++) {
         const element = images[index];
         element.classList.add('img-spec')   
     }
     
+    newCard.append(first, last)
+
+    const data = document.querySelectorAll('span')
+    for (let index = 0; index < data.length; index++) {
+        const element = data[index];
+        element.classList.add('text')   
+    }
+
+    newCard.append(role)
+
+    const allRole = document.querySelectorAll('small')
+    for (let index = 0; index < allRole.length; index++) {
+        const element = allRole[index];
+        element.classList.add('small')   
+    }
 }
