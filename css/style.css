@@ -8,18 +8,25 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: lightgrey;
+}
+
 .container {
     max-width: 1000px;
     margin: auto;
     background-color: black;
-    color: white;
     display: flex;
     flex-wrap: wrap;
 }
 
 .card {
     width: calc(100% / 3);
-    background-color: red;
-    border: 1px solid white;
-    height: 300px;
+    background-color: white;
+    border: 1px solid black;
+    height: 400px;
+}
+
+.img-spec {
+    width: 100%;
 }
