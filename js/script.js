@@ -35,3 +35,12 @@ const members = [
         photo: 'barbara-ramos-graphic-designer.jpg'
     }
 ]
+
+
+for (let index = 0; index < members.length; index++) {
+    const singleobject = members[index];
+    for(const key in singleobject) {
+        console.log(key, singleobject[key]);
+        document.querySelector('.container').append(key, singleobject[key])
+    }
+}
